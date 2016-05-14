@@ -1,4 +1,4 @@
-package com.dataLayer.DAO;
+package com.dataLayer.DAO.interfaces;
 
 import com.dataLayer.entity.User;
 
