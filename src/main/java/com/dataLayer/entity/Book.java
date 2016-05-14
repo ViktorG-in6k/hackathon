@@ -1,26 +1,29 @@
 package com.dataLayer.entity;
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @javax.persistence.Entity(name = "book")
-public class Book extends com.dataLayer.entity.Entity {
+public class Book extends Entity {
     @Column(name = "email")
     private String name;
     @Column
     private String author;
     @Column
     private String genre;
-    @Column
-    private int creatorId;
+    @ManyToOne
+    private User creator;
     @Column
     private String picture;
     @Column
     private String description;
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<User> owners;
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "books")
+    private List<User> owners = new ArrayList<>();
+
+    @Column
+    @OneToMany(mappedBy = "book")
+    private List<Transfer> transfers;
 
     public Book() {
     }
@@ -49,13 +52,6 @@ public class Book extends com.dataLayer.entity.Entity {
         this.genre = genre;
     }
 
-    public int getCreatorId() {
-        return creatorId;
-    }
-
-    public void setCreatorId(int creatorId) {
-        this.creatorId = creatorId;
-    }
 
     public String getPicture() {
         return picture;
