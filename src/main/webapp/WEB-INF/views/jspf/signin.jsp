@@ -2,7 +2,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 
 <div  class="container">
-    <br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4" >

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
-    <title>FoodOrdering</title>
+    <title>BookCrossing</title>
     <link href="/resources/css/lib/bootstrapTheme.css" rel="stylesheet">
     <script src="/resources/js/lib/angular.min.js"></script>
     <link href="/resources/css/indexPage.css" rel="stylesheet">

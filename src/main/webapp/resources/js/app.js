@@ -2,18 +2,23 @@ var bookCrossing = angular.module('bookCrossing', [
     'ngRoute',
     'ngResource',
     'navbarCtrl',
-    'mainCtrl'
+    'bookService',
+    'bookCtrls'
 ]);
 
 bookCrossing.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider
-            .when('/main', {
-                templateUrl: '/resources/js/main/main.html',
-                controller: 'mainCtrl'
+            .when('/books', {
+                templateUrl: '/resources/js/books/books.html',
+                controller: 'booksCtrl'
+            })
+            .when('/books/:bookId', {
+                templateUrl: '/resources/js/books/book.html',
+                controller: 'bookDetailCtrl'
             })
             .otherwise({
-                redirectTo: '/main'
+                redirectTo: '/books'
             });
 
     }]);

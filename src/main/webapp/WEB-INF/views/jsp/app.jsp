@@ -14,10 +14,8 @@
     <jsp:include page="/WEB-INF/views/jspf/nav.jsp" flush="true"/>
     <br/>
     <div>
-        <div class="container-fluid">
-            <div class="row app">
+        <div class="app-container">
                 <div ng-view></div>
-            </div>
         </div>
     </div>
 
@@ -27,7 +25,9 @@
 
     <script src="/resources/js/app.js"></script>
     <script src="/resources/js/navbarCtrl.js"></script>
-    <script src="/resources/js/main/mainCtrl.js"></script>
+    <script src="/resources/js/books/bookService.js"></script>
+    <script src="/resources/js/books/bookCtrl.js"></script>
+
 
 </body>
 </html>
