@@ -1,28 +1,36 @@
-package com.dataLayer.entity;
+package com.dataLayer.entity.DTO;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import com.dataLayer.entity.Book;
+import com.dataLayer.entity.Transfer;
+import com.dataLayer.entity.User;
+
 import java.util.List;
 
-@javax.persistence.Entity(name = "book")
-public class Book extends Entity {
-    @Column(name = "email")
+public class BooksResponceDTO {
+    private int id;
     private String name;
-    @Column
     private String author;
-    @Column
     private String genre;
-    @ManyToOne
     private User creator;
-    @Column
     private String picture;
-    @Column
     private String description;
 
-    @OneToMany(mappedBy = "book")
-    private List<Transfer> transfers;
+    public BooksResponceDTO(Book book) {
+        this.id = book.getId();
+        this.name = book.getName();
+        this.author = book.getAuthor();
+        this.genre = book.getGenre();
+        this.creator = book.getCreator();
+        this.picture = book.getPicture();
+        this.description = book.getDescription();
+    }
 
-    public Book() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -55,14 +63,6 @@ public class Book extends Entity {
 
     public void setCreator(User creator) {
         this.creator = creator;
-    }
-
-    public List<Transfer> getTransfers() {
-        return transfers;
-    }
-
-    public void setTransfers(List<Transfer> transfers) {
-        this.transfers = transfers;
     }
 
     public String getPicture() {
