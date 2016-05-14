@@ -1,6 +1,6 @@
-package com.dataLayer.DAO;
+package com.dataLayer.DAO.implementations;
 
-import com.dataLayer.DAO.UserDAO;
+import com.dataLayer.DAO.interfaces.UserDAO;
 import com.dataLayer.entity.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
