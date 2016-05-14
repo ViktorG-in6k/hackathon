@@ -1,13 +1,12 @@
 package com.dataLayer.entity;
 
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @javax.persistence.Entity(name = "user")
-public class User extends com.dataLayer.entity.Entity {
+public class User extends Entity {
     @Column(name = "email")
     private String email;
     @Column
@@ -16,10 +15,19 @@ public class User extends com.dataLayer.entity.Entity {
     private String familyName;
     @Column
     private String picture;
+    @OneToMany(mappedBy = "creator")
+    private List<Book> createdBooks = new ArrayList<>();
     @Column
     private String gender;
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Book> booksList;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_book",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "book_id")})
+    private List<Book> books = new ArrayList<>();
+
+    @Column
+    @OneToMany(mappedBy = "user")
+    private List<Transfer> transfers;
 
     public User() {
     }

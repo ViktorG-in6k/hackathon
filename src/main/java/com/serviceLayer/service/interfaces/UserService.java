@@ -1,4 +1,4 @@
-package com.serviceLayer.service;
+package com.serviceLayer.service.interfaces;
 
 import com.dataLayer.entity.User;
 import com.dataLayer.entity.external.OauthProfile;
