@@ -6,7 +6,7 @@ import java.util.List;
 
 @javax.persistence.Entity(name = "book")
 public class Book extends Entity {
-    @Column(name = "email")
+    @Column
     private String name;
     @Column
     private String author;
