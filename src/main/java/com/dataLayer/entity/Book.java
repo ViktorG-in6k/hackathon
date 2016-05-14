@@ -6,7 +6,7 @@ import java.util.List;
 
 @javax.persistence.Entity(name = "book")
 public class Book extends Entity {
-    @Column(name = "email")
+    @Column
     private String name;
     @Column
     private String author;
@@ -19,7 +19,7 @@ public class Book extends Entity {
     @Column
     private String description;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
     private List<Transfer> transfers;
 
     public Book() {

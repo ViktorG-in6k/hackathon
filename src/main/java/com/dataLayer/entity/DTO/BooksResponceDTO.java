@@ -11,7 +11,7 @@ public class BooksResponceDTO {
     private String name;
     private String author;
     private String genre;
-    private User creator;
+    private UserDTO creator;
     private String picture;
     private String description;
 
@@ -20,7 +20,7 @@ public class BooksResponceDTO {
         this.name = book.getName();
         this.author = book.getAuthor();
         this.genre = book.getGenre();
-        this.creator = book.getCreator();
+        this.creator = new UserDTO(book.getCreator());
         this.picture = book.getPicture();
         this.description = book.getDescription();
     }
@@ -57,11 +57,11 @@ public class BooksResponceDTO {
         this.genre = genre;
     }
 
-    public User getCreator() {
+    public UserDTO getCreator() {
         return creator;
     }
 
-    public void setCreator(User creator) {
+    public void setCreator(UserDTO creator) {
         this.creator = creator;
     }
 
