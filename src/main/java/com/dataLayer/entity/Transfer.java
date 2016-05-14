@@ -12,11 +12,9 @@ public class Transfer extends Entity {
     @Column
     private LocalDateTime datePush;
 
-    @Column
     @ManyToOne
     private Book book;
 
-    @Column
     @ManyToOne
     private User user;
 

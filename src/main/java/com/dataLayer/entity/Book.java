@@ -18,10 +18,7 @@ public class Book extends Entity {
     private String picture;
     @Column
     private String description;
-    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "books")
-    private List<User> owners = new ArrayList<>();
 
-    @Column
     @OneToMany(mappedBy = "book")
     private List<Transfer> transfers;
 
@@ -67,13 +64,5 @@ public class Book extends Entity {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<User> getOwners() {
-        return owners;
-    }
-
-    public void setOwners(List<User> owners) {
-        this.owners = owners;
     }
 }

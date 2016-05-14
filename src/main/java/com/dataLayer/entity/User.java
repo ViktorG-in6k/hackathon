@@ -19,13 +19,7 @@ public class User extends Entity {
     private List<Book> createdBooks = new ArrayList<>();
     @Column
     private String gender;
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "user_book",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "book_id")})
-    private List<Book> books = new ArrayList<>();
 
-    @Column
     @OneToMany(mappedBy = "user")
     private List<Transfer> transfers;
 
