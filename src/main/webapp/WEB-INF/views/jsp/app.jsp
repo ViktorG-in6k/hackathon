@@ -14,7 +14,7 @@
     <jsp:include page="/WEB-INF/views/jspf/nav.jsp" flush="true"/>
     <br/>
     <div>
-        <div class="app-container">
+        <div class="app-container container">
                 <div ng-view></div>
         </div>
     </div>
