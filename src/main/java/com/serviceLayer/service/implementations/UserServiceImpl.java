@@ -1,8 +1,9 @@
-package com.serviceLayer.service;
+package com.serviceLayer.service.implementations;
 
 import com.dataLayer.DAO.interfaces.UserDAO;
 import com.dataLayer.entity.User;
 import com.dataLayer.entity.external.OauthProfile;
+import com.serviceLayer.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

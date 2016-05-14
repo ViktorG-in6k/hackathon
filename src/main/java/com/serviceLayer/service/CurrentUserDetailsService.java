@@ -6,6 +6,7 @@ import com.dataLayer.entity.User;
 import com.dataLayer.entity.external.OauthProfile;
 import com.google.common.collect.ImmutableSet;
 import com.serviceLayer.googleAuthentication.CurrentUserDetails;
+import com.serviceLayer.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
