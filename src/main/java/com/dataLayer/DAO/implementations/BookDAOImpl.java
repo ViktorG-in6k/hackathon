@@ -32,4 +32,11 @@ public class BookDAOImpl implements BookDAO {
         Query query = session.createQuery("from book");
         return (List<Book>) query.list();
     }
+
+    @Override
+    public Book getBookById(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("from book where id =:id");
+        return (Book) query.setInteger("id", id).uniqueResult();
+    }
 }

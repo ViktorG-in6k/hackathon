@@ -3,6 +3,7 @@ package com.serviceLayer.service.implementations;
 import com.dataLayer.DAO.interfaces.BookDAO;
 import com.dataLayer.DAO.interfaces.UserDAO;
 import com.dataLayer.entity.Book;
+import com.dataLayer.entity.DTO.BookDTO;
 import com.dataLayer.entity.DTO.BooksResponceDTO;
 import com.serviceLayer.service.interfaces.BookService;
 import com.serviceLayer.service.interfaces.UserService;
@@ -24,5 +25,10 @@ public class BookServiceImpl implements BookService {
             booksResponceDTOs.add(new BooksResponceDTO(book));
         }
         return booksResponceDTOs;
+    }
+
+    @Override
+    public BookDTO getBookById(int id){
+       return new BookDTO(bookDAO.getBookById(id));
     }
 }
