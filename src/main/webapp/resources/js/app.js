@@ -1,7 +1,9 @@
 var bookCrossing = angular.module('bookCrossing', [
     'ngRoute',
     'ngResource',
+    'ngAnimate',
     'navbarCtrl',
+    'sidebarCtrl',
     'bookService',
     'bookCtrls'
 ]);

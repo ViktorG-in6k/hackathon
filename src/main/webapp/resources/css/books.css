@@ -1,0 +1,20 @@
+.book {
+    opacity: .93;
+}
+
+.book-description {
+    overflow: hidden;
+    max-height: 60%;
+    color: #566680;
+}
+
+.book-author {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.book-info {
+    border-bottom: 1px solid gray;
+    color: #464646;
+}

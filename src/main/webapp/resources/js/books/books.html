@@ -1,7 +1,7 @@
 <ul class="list-group" id="contact-list">
-    <li class="list-group-item" ng-repeat="book in books">
+    <li class="list-group-item book" ng-repeat="book in books">
             <div class="col-xs-12 col-sm-3">
-                <img src="{{book.picture}}" alt="{{book.name}}"
+                <img ng-src="{{book.picture}}" alt="{{book.name}}"
                      class="img-responsive img-circle"/>
             </div>
             <div class="col-xs-12 col-sm-9">
