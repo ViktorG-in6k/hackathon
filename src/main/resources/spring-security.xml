@@ -7,8 +7,6 @@
     <security:http  pattern="/resources/**" security="none"/>
     <security:http pattern="/" security="none" />
 
-
-
     <security:http  use-expressions="true" entry-point-ref="clientAuthenticationEntryPoint">
         <security:http-basic/>
         <security:anonymous enabled="false"/>
