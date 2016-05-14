@@ -12,22 +12,26 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userDAO;
 
+    @Override
     public void saveUser(User user) {
         if (getUserByEmail(user.getEmail()) == null) {
             userDAO.save(user);
         }
     }
 
+    @Override
     public void saveUser(String email) {
         if (getUserByEmail(email) == null) {
             userDAO.save(new User(email));
         }
     }
 
+    @Override
     public User getUser(long id) {
         return userDAO.getUser(id);
     }
 
+    @Override
     public User getUserByEmail(String email) {
         return userDAO.getUserByEmail(email);
     }
