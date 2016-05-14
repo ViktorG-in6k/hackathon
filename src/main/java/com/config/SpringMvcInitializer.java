@@ -1,4 +1,4 @@
-package main.java.com.config;
+package com.config;
 
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.web.context.WebApplicationContext;

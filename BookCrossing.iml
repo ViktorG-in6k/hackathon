@@ -2,11 +2,21 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/com/config/ConfigurationClass.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/config/HibernateConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/config/OAuth2SecurityConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/com/config/WebAppConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/resources/spring-security.xml</file>
+        </fileset>
+      </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="sessionFactory" />
+        </datasource-map>
         <naming-strategy-map />
       </configuration>
     </facet>

@@ -1,4 +1,4 @@
-package main.java.com.config;
+package com.config;
 
 import com.google.common.collect.ImmutableList;
 import org.springframework.beans.factory.annotation.Autowired;
