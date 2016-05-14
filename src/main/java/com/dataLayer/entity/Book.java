@@ -19,7 +19,7 @@ public class Book extends Entity {
     @Column
     private String description;
 
-    @OneToMany(mappedBy = "book")
+    @OneToMany(mappedBy = "book",fetch = FetchType.EAGER)
     private List<Transfer> transfers;
 
     public Book() {

@@ -29,7 +29,7 @@ public class BooksController {
     @RequestMapping(value = "/api/books/{id}", method = RequestMethod.GET)
     public
     @ResponseBody
-    BookDTO getBooks(@PathVariable("id") int bookId) {
+    BookDTO getBook(@PathVariable("id") int bookId) {
         return bookService.getBookById(bookId);
     }
 }
