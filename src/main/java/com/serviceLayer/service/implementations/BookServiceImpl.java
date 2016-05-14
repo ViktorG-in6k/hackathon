@@ -18,6 +18,11 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookDAO bookDAO;
 
+    public void saveBook(Book book)
+    {
+        bookDAO.save(book);
+    }
+
     @Override
     public List<BooksResponceDTO> getAllBook(){
         List<BooksResponceDTO> booksResponceDTOs = new ArrayList<>();
