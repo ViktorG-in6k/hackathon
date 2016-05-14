@@ -5,9 +5,12 @@ import com.dataLayer.DAO.interfaces.UserDAO;
 import com.dataLayer.entity.Book;
 import com.dataLayer.entity.DTO.BookDTO;
 import com.dataLayer.entity.DTO.BooksResponceDTO;
+import com.dataLayer.entity.DTO.RequestBook;
+import com.dataLayer.entity.User;
 import com.serviceLayer.service.interfaces.BookService;
 import com.serviceLayer.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,22 +21,28 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookDAO bookDAO;
 
-    public void saveBook(Book book)
-    {
-        bookDAO.save(book);
+    public void saveBook(RequestBook book, Authentication authentication) {
+        User creator = ((User) authentication.getPrincipal());
+        Book newBook = new Book(book, creator);
+        bookDAO.save(newBook);
     }
 
     @Override
-    public List<BooksResponceDTO> getAllBook(){
+    public List<BooksResponceDTO> getAllBook() {
         List<BooksResponceDTO> booksResponceDTOs = new ArrayList<>();
-        for (Book book:  bookDAO.getListOfAllBooks()){
+        for (Book book : bookDAO.getListOfAllBooks()) {
             booksResponceDTOs.add(new BooksResponceDTO(book));
         }
         return booksResponceDTOs;
     }
 
     @Override
-    public BookDTO getBookById(int id){
+    public BookDTO getBookDTOById(int id) {
         return new BookDTO(bookDAO.getBookById(id));
+    }
+
+    @Override
+    public Book getBookById(int id) {
+        return bookDAO.getBookById(id);
     }
 }
