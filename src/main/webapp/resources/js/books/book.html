@@ -26,14 +26,13 @@
         <br/>
         <div class="row">
             <div class="col-md-6">
-                <span class="text-muted">
+                <span class="h4">
                     Current owner
                     <a href="#/users/{{book.user.id}}">
                         {{book.creator.name}}
                     </a>
-                </span>
-            </div>
-            <div class="col-md-6">
+                    </span>
+                <br/>
                 <span class="text-muted">
                     First owner
                     <a href="#/users/{{book.user.id}}">
@@ -45,8 +44,6 @@
     </div>
     <div class="col-sm-12 well margin-well">
         <span class="h3 book-history">Book history</span>
-        <div ng-repeat="val in [1,2,3]">
-            <div ng-include="'/resources/js/books/_book_history.html'"></div>
-        </div>
+        <div ng-include="'/resources/js/books/_book_history.html'"></div>
     </div>
 </div>

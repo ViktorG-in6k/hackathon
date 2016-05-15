@@ -5,11 +5,12 @@ module.controller('booksCtrl', ['$scope', 'Book',
         $scope.books = Book.query();
     }]);
 
-module.controller('bookDetailCtrl', ['$scope', '$routeParams', 'Book',
-    function($scope, $routeParams, Book){
+module.controller('bookDetailCtrl', ['$scope', '$routeParams', 'Book', 'Transfer',
+    function($scope, $routeParams, Book, Transfer){
         var bookId = $routeParams.bookId;
 
         $scope.book = Book.get({id: bookId});
 
+        $scope.transfers = Transfer.query({id: bookId});
         //$scope.createBook = Book.save
 }]);

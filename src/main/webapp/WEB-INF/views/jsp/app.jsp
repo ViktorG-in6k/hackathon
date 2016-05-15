@@ -17,12 +17,14 @@
 <body>
 <jsp:include page="/WEB-INF/views/jspf/nav.jsp" flush="true"/>
 <br/>
-<div class="app-container">
-    <div class="col-md-2 col-sm-12">
-        <jsp:include page="/WEB-INF/views/jspf/sidebar.jsp" flush="true"/>
-    </div>
-    <div class="col-md-10 col-sm-12">
-        <div ng-view></div>
+<div class="wrapper">
+    <div class="app-container">
+        <div class="col-md-2 col-sm-12">
+            <jsp:include page="/WEB-INF/views/jspf/sidebar.jsp" flush="true"/>
+        </div>
+        <div class="col-md-8 col-sm-12">
+            <div ng-view></div>
+        </div>
     </div>
 </div>
 <script src="/resources/js/lib/angular.min.js"></script>
@@ -35,6 +37,7 @@
 <script src="/resources/js/sidebarCtrl.js"></script>
 <script src="/resources/js/books/bookService.js"></script>
 <script src="/resources/js/books/bookCtrl.js"></script>
+<script src="/resources/js/books/transferService.js"></script>
 
 
 </body>

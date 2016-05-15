@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url("/resources/images/books-bench-background.jpg");
+    background: url("/resources/images/books-bench-background3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -39,5 +39,6 @@ body {
 .app-container {
     margin-top: 70px;
 }
+
 
 

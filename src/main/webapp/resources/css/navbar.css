@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #24617c;
+    background-color: #fffbc7;
 }
 
 .navbar-default .navbar-brand.logo {
@@ -8,6 +8,15 @@
     font-size: 2em;
 }
 
+.navbar-default {
+    background-image: none;
+}
+
 .navbar-default:hover .navbar-brand:hover{
     color: #c6c6c6;
+}
+
+.btn.logout {
+    background-image: none;
+    background-color: white;
 }

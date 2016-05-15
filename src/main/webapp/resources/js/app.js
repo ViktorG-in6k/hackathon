@@ -5,7 +5,8 @@ var bookCrossing = angular.module('bookCrossing', [
     'navbarCtrl',
     'sidebarCtrl',
     'bookService',
-    'bookCtrls'
+    'bookCtrls',
+    'transferService'
 ]);
 
 bookCrossing.config(['$routeProvider',

@@ -1,5 +1,13 @@
 .book {
     opacity: .93;
+    background-color: #fffbc7;
+    margin-bottom: 10px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.well.margin-well {
+    background-color: #fffbc7;
 }
 
 .book-description {
@@ -31,4 +39,16 @@
 
 .book-history-info {
     font-family: Calibri;
+}
+
+.mybtn {
+    background-color: white;
+    padding: 6px;
+    color: black;
+    border: 1px solid #2e2e2e;
+    border-radius: 4px;
+}
+
+.mybtn:hover{
+   text-decoration: none;
 }
