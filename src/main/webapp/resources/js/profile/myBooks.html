@@ -17,9 +17,14 @@
             <br/>
             <span class="h5 book-description">{{transfer.book.description}}</span>
             <br/>
+
         </div>
 
-        <span class="text-muted book-author"></span>
+        <span class="book-author">
+            <button ng-click="pushTransfer(transfer)" class="btn btn-primary">
+                Release book
+            </button>
+        </span>
         <div class="clearfix"></div>
     </li>
 </ul>

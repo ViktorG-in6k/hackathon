@@ -9,7 +9,8 @@ var bookCrossing = angular.module('bookCrossing', [
     'transferService',
     'ui-notification',
     'profileCtrl',
-    'userTransfers'
+    'userTransfers',
+    'closeTransfer'
 ]);
 
 bookCrossing.config(['$routeProvider',
