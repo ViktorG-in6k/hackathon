@@ -18,14 +18,14 @@ public class TransferController {
     TransferService transferService;
 
     @RequestMapping(value = "/api/books/{bookId}/transfer", method = RequestMethod.POST)
-    public
-    @ResponseBody
-    void newTransfer(@PathVariable("bookId") int bookId,Authentication authentication) {
-        transferService.createTransfer(bookId,authentication);
+    public void newTransfer(@PathVariable("bookId") int bookId, Authentication authentication) {
+        transferService.createTransfer(bookId, authentication);
     }
 
     @RequestMapping(value = "/api/transfers/current/{transferId}", method = RequestMethod.POST)
-    public @ResponseBody int closeTransfer(@PathVariable("transferId") int transferId) {
+    public
+    @ResponseBody
+    int closeTransfer(@PathVariable("transferId") int transferId) {
         transferService.closeTransfer(transferId);
         return transferId;
     }
@@ -34,7 +34,7 @@ public class TransferController {
     public
     @ResponseBody
     List<TransferDTO> getBookTransferList(@PathVariable("bookId") int bookId) {
-       return transferService.getListBookTransfers(bookId);
+        return transferService.getListBookTransfers(bookId);
     }
 
     @RequestMapping(value = "/api/transfers/current", method = RequestMethod.GET)

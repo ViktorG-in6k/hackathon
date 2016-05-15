@@ -3,6 +3,12 @@
         <img class="img-responsive img-center img-rounded"
              ng-src="{{book.picture}}">
     </div>
+    <div class="col-md-3">
+        <a ng-if="whantToAdd && (book.owner == null)"
+           class="btn btn-success" ng-click="acceptBook()">
+            Add book
+        </a>
+    </div>
     <div class="col-sm-12 well margin-well">
             <span class="book-name h2">
                 {{book.name}}

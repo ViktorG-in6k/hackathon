@@ -5,8 +5,10 @@ import com.dataLayer.entity.Book;
 import com.dataLayer.entity.DTO.TransferDTO;
 import com.dataLayer.entity.Transfer;
 import com.dataLayer.entity.User;
+import com.serviceLayer.googleAuthentication.CurrentUserDetails;
 import com.serviceLayer.service.interfaces.BookService;
 import com.serviceLayer.service.interfaces.TransferService;
+import com.serviceLayer.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
@@ -23,10 +25,12 @@ public class TransferServiceImpl implements TransferService {
     TransferDAO transferDAO;
     @Autowired
     BookService bookService;
+    @Autowired
+    UserService userService;
 
     @Override
     public void createTransfer(int bookId, Authentication authentication) {
-        User creator = ((User) authentication.getPrincipal());
+        User creator = userService.getUser((((CurrentUserDetails) authentication.getPrincipal()).getUser().getId()));
         Book book = bookService.getBookById(bookId);
         Transfer transfer = new Transfer(book, creator);
         transferDAO.save(transfer);
