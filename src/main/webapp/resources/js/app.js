@@ -20,6 +20,10 @@ bookCrossing.config(['$routeProvider',
                 templateUrl: '/resources/js/books/book.html',
                 controller: 'bookDetailCtrl'
             })
+            .when('/createBook', {
+                templateUrl: '/resources/js/books/newBook.html',
+                controller: 'bookCreationCtrl'
+            })
             .otherwise({
                 redirectTo: '/books'
             });

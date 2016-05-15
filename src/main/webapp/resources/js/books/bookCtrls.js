@@ -14,3 +14,11 @@ module.controller('bookDetailCtrl', ['$scope', '$routeParams', 'Book', 'Transfer
         $scope.transfers = Transfer.query({id: bookId});
         //$scope.createBook = Book.save
 }]);
+
+module.controller('bookCreationCtrl', ['$scope', 'Book',
+    function($scope, Book){
+        $scope.book = {};
+        $scope.createBook = function () {
+            Book.save($scope.book);
+        }
+    }]);

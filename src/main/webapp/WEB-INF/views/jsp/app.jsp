@@ -36,7 +36,7 @@
 <script src="/resources/js/navbarCtrl.js"></script>
 <script src="/resources/js/sidebarCtrl.js"></script>
 <script src="/resources/js/books/bookService.js"></script>
-<script src="/resources/js/books/bookCtrl.js"></script>
+<script src="/resources/js/books/bookCtrls.js"></script>
 <script src="/resources/js/books/transferService.js"></script>
 
 

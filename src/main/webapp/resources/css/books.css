@@ -42,7 +42,9 @@
 }
 
 .mybtn {
+    display: inline-block;
     background-color: white;
+    margin-bottom: -5px;
     padding: 6px;
     color: black;
     border: 1px solid #2e2e2e;
@@ -51,4 +53,8 @@
 
 .mybtn:hover{
    text-decoration: none;
+}
+
+.table.table-history {
+    font-size: 1.4em;
 }
