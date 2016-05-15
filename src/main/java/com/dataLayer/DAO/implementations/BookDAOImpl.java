@@ -40,6 +40,7 @@ public class BookDAOImpl implements BookDAO {
         return (Book) query.setInteger("id", id).uniqueResult();
     }
 
+
     @Override
     public void setOwner(int bookId, int ownerId) {
         Session session = sessionFactory.getCurrentSession();

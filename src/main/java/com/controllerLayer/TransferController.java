@@ -24,7 +24,7 @@ public class TransferController {
         transferService.createTransfer(bookId,authentication);
     }
 
-    @RequestMapping(value = "/api/transfer/{transferId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/api/transfer/{transferId}", method = RequestMethod.PUT)
     public void closeTransfer(@PathVariable("transferId") int transferId) {
         transferService.closeTransfer(transferId);
     }

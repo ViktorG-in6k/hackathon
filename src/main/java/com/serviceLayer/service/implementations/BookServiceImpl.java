@@ -8,6 +8,7 @@ import com.dataLayer.entity.DTO.BooksResponceDTO;
 import com.dataLayer.entity.DTO.RequestBook;
 import com.dataLayer.entity.User;
 import com.serviceLayer.service.interfaces.BookService;
+import com.serviceLayer.service.interfaces.TransferService;
 import com.serviceLayer.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,12 +21,15 @@ import java.util.List;
 public class BookServiceImpl implements BookService {
     @Autowired
     BookDAO bookDAO;
+    @Autowired
+    TransferService transferService;
 
     @Override
     public void saveBook(RequestBook book, Authentication authentication) {
         User creator = ((User) authentication.getPrincipal());
         Book newBook = new Book(book, creator);
         bookDAO.save(newBook);
+
     }
 
     @Override
