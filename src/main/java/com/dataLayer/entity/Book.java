@@ -36,6 +36,7 @@ public class Book extends Entity {
         this.genre = book.getGenre();
         this.picture = book.getPicture();
         this.creator = creator;
+        this.owner = creator;
     }
 
     public String getName() {
