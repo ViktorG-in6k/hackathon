@@ -18,7 +18,7 @@
     </tr>
     <tr ng-repeat="transfer in transfers" ng-class="{warning : !transfer.datePush">
         <td>
-            {{transfer.id}}
+            {{transfer.book.id}}
         </td>
         <td>
             <img ng-src="{{transfer.user.picture}}" style="width: 50px;">

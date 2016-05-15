@@ -14,7 +14,7 @@
         History
     </a>
     <br/>
-    <a href="#/foundBook" class="list-group-item ">
+    <a href="#/foundBook" class="list-group-item found-book-btn" ng-if="!showFoundBook">
         <i class="fa fa-user"></i>
         <span class="glyphicon glyphicon-search"></span>
         Found a book?

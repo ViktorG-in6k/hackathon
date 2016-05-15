@@ -15,16 +15,18 @@ body {
 .ng-enter {
     transition: 1.75s;
     opacity: 0;
-    width: 0;
 }
 
 .ng-enter-active {
     opacity: 1;
-    width: auto;
 }
 
-.ng-enter-stagger, .ng-leave-stagger {
-    transition-delay: 1.75s;
+.ng-enter-stagger {
+    transition-delay: 2s;
+}
+
+.ng-leave-stagger {
+    transition-delay: 1s;
 }
 
 .ng-leave {

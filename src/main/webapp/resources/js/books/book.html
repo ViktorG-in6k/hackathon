@@ -28,14 +28,16 @@
             <div class="col-md-6">
                 <span class="h4">
                     Current owner
-                    <a href="#/users/{{book.user.id}}">
-                        {{book.creator.name}}
+                    <a href="#/users/{{book.owner.id}}">
+
+                        {{book.owner.name}}
                     </a>
+                    <span class="h3" ng-if="!book.owner.name"><i>book is free!</i></span>
                     </span>
                 <br/>
                 <span class="text-muted">
                     First owner
-                    <a href="#/users/{{book.user.id}}">
+                    <a href="#/users/{{book.creator.id}}">
                         {{book.creator.name}}
                     </a>
                 </span>

@@ -20,3 +20,8 @@
     background-image: none;
     background-color: white;
 }
+
+.found-book-btn {
+    background-color: #a5f399;
+    font-size: 1.2em;
+}
