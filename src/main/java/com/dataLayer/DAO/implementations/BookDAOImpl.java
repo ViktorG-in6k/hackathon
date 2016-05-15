@@ -39,4 +39,23 @@ public class BookDAOImpl implements BookDAO {
         Query query = session.createQuery("from book where id =:id");
         return (Book) query.setInteger("id", id).uniqueResult();
     }
+
+    @Override
+    public void setOwner(int bookId, int ownerId) {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("update book set owner_id = :ownerId where id = :bookId");
+        query
+                .setInteger("bookId",bookId)
+                .setInteger("ownerId",ownerId);
+        query.executeUpdate();
+    }
+
+    @Override
+    public void setOwner(int bookId) {
+        Session session = sessionFactory.getCurrentSession();
+        Query query = session.createQuery("update book set owner_id = :null where id = :bookId");
+        query
+                .setInteger("bookId",bookId);
+        query.executeUpdate();
+    }
 }

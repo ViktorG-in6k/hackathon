@@ -1,5 +1,7 @@
 package com.dataLayer.entity;
 
+import com.dataLayer.entity.DTO.RequestBook;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,8 @@ public class Book extends Entity {
     private String genre;
     @ManyToOne
     private User creator;
+    @ManyToOne
+    private User owner;
     @Column
     private String picture;
     @Column
@@ -23,6 +27,15 @@ public class Book extends Entity {
     private List<Transfer> transfers;
 
     public Book() {
+    }
+
+    public Book(RequestBook book, User creator) {
+        this.name = book.getName();
+        this.author = book.getAuthor();
+        this.description = book.getDescription();
+        this.genre = book.getGenre();
+        this.picture = book.getPicture();
+        this.creator = creator;
     }
 
     public String getName() {
@@ -79,5 +92,13 @@ public class Book extends Entity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 }

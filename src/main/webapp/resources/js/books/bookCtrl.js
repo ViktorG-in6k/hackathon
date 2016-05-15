@@ -10,4 +10,6 @@ module.controller('bookDetailCtrl', ['$scope', '$routeParams', 'Book',
         var bookId = $routeParams.bookId;
 
         $scope.book = Book.get({id: bookId});
+
+        //$scope.createBook = Book.save
 }]);

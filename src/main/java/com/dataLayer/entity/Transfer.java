@@ -18,7 +18,13 @@ public class Transfer extends Entity {
     @ManyToOne
     private User user;
 
-    public Transfer(){
+    public Transfer() {
+    }
+
+    public Transfer(Book book, User user) {
+        this.book = book;
+        this.user = user;
+        this.datePull = LocalDateTime.now();
 
     }
 
