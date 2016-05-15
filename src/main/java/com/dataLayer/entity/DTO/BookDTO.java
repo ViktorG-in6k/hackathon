@@ -8,6 +8,7 @@ public class BookDTO {
     private String author;
     private String genre;
     private UserDTO creator;
+    private UserDTO owner;
     private String picture;
     private String description;
 
@@ -19,6 +20,9 @@ public class BookDTO {
         this.creator = new UserDTO(book.getCreator());
         this.picture = book.getPicture();
         this.description = book.getDescription();
+        if(book.getOwner()!=null){
+            this.owner = new UserDTO(book.getOwner());
+        }
     }
 
     public int getId() {
@@ -75,5 +79,13 @@ public class BookDTO {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public UserDTO getOwner() {
+        return owner;
+    }
+
+    public void setOwner(UserDTO owner) {
+        this.owner = owner;
     }
 }
