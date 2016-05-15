@@ -12,7 +12,7 @@ public interface TransferDAO {
 
     Transfer getTransferById(int transferId);
 
-    List<Book> getListOfBookByUser(int userId);
+    List<Transfer> getListOfBookByUser(int userId);
 
     List<Transfer> getListOfBookTransfer(int bookId);
 }

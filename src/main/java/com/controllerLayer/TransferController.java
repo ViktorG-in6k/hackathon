@@ -1,5 +1,6 @@
 package com.controllerLayer;
 
+import com.dataLayer.entity.DTO.BookDTO;
 import com.dataLayer.entity.DTO.RequestBook;
 import com.dataLayer.entity.DTO.TransferDTO;
 import com.serviceLayer.service.interfaces.BookService;
@@ -33,5 +34,19 @@ public class TransferController {
     @ResponseBody
     List<TransferDTO> getBookTransferList(@PathVariable("bookId") int bookId) {
        return transferService.getListBookTransfers(bookId);
+    }
+
+    @RequestMapping(value = "/api/transfers/current", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    List<TransferDTO> getCurrentBooks(Authentication authentication) {
+        return transferService.getCurrentBooks(authentication);
+    }
+
+    @RequestMapping(value = "/api/transfers/all", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    List<TransferDTO> getHistoryBooks(Authentication authentication) {
+        return transferService.getHistoryBooks(authentication);
     }
 }

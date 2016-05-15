@@ -28,7 +28,7 @@ public class TransferServiceImpl implements TransferService {
     public void createTransfer(int bookId, Authentication authentication) {
         User creator = ((User) authentication.getPrincipal());
         Book book = bookService.getBookById(bookId);
-        Transfer transfer = new Transfer(book,creator);
+        Transfer transfer = new Transfer(book, creator);
         transferDAO.save(transfer);
     }
 
@@ -41,13 +41,38 @@ public class TransferServiceImpl implements TransferService {
     }
 
     @Override
-    public List<TransferDTO> getListBookTransfers(int bookId){
-        List<TransferDTO>transferDTOs = new ArrayList<>();
+    public List<TransferDTO> getListBookTransfers(int bookId) {
+        List<TransferDTO> transferDTOs = new ArrayList<>();
         List<Transfer> transfers = transferDAO.getListOfBookTransfer(bookId);
-        for(Transfer transfer: transfers){
+        for (Transfer transfer : transfers) {
             transferDTOs.add(new TransferDTO(transfer));
         }
         return transferDTOs;
     }
 
+    @Override
+    public List<TransferDTO> getCurrentBooks(Authentication authentication) {
+        List<TransferDTO> transferDTOs = new ArrayList<>();
+        User user = ((User) authentication.getPrincipal());
+        List<Transfer> userBooks = transferDAO.getListOfBookByUser(user.getId());
+        List<TransferDTO> currentBooks = new ArrayList<>();
+        for (Transfer transfer : userBooks) {
+            if (transfer.getDatePush() == null) {
+                currentBooks.add(new TransferDTO(transfer));
+            }
+        }
+        return currentBooks;
+    }
+
+    @Override
+    public List<TransferDTO> getHistoryBooks(Authentication authentication) {
+        List<TransferDTO> transferDTOs = new ArrayList<>();
+        User user = ((User) authentication.getPrincipal());
+        List<Transfer> userBooks = transferDAO.getListOfBookByUser(user.getId());
+        List<TransferDTO> currentBooks = new ArrayList<>();
+        for (Transfer transfer : userBooks) {
+            currentBooks.add(new TransferDTO(transfer));
+        }
+        return currentBooks;
+    }
 }

@@ -41,10 +41,10 @@ public class TransferDAOImpl implements TransferDAO {
     }
 
     @Override
-    public List<Book> getListOfBookByUser(int userId) {
+    public List<Transfer> getListOfBookByUser(int userId) {
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("from transfer where user_id = :userId");
-        return (List<Book>) query.setLong("userId", userId).list();
+        return (List<Transfer>) query.setLong("userId", userId).list();
     }
 
     @Override

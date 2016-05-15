@@ -1,5 +1,6 @@
 package com.serviceLayer.service.interfaces;
 
+import com.dataLayer.entity.DTO.BookDTO;
 import com.dataLayer.entity.DTO.TransferDTO;
 import org.springframework.security.core.Authentication;
 
@@ -11,4 +12,8 @@ public interface TransferService {
     void closeTransfer(int transferId);
 
     List<TransferDTO> getListBookTransfers(int bookId);
+
+    List<TransferDTO> getCurrentBooks(Authentication authentication);
+
+    List<TransferDTO> getHistoryBooks(Authentication authentication);
 }
