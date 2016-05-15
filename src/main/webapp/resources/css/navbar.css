@@ -2,8 +2,10 @@
     background-color: #24617c;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand.logo {
     color: #d5d5d5;
+    font-family: "Brush Script MT" !important;
+    font-size: 2em;
 }
 
 .navbar-default:hover .navbar-brand:hover{

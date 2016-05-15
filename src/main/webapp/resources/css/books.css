@@ -18,3 +18,17 @@
     border-bottom: 1px solid gray;
     color: #464646;
 }
+
+.book-name {
+    color: #eb9316;
+    margin-left: 10px;
+}
+
+.book-history {
+    color: #c78688;
+    margin: 0 0 20px 10px;
+}
+
+.book-history-info {
+    font-family: Calibri;
+}

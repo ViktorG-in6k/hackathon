@@ -1,14 +1,52 @@
-    <div class="col-sm-12">
-        <div class="col-sm-3 margin-img">
-            <img class="img-thumbnail img-center img-rounded"
-                 ng-src="{{book.picture}}">
+<div class="col-sm-12">
+    <div class="col-sm-offset-3 col-sm-6 margin-img">
+        <img class="img-responsive img-center img-rounded"
+             ng-src="{{book.picture}}">
+    </div>
+    <div class="col-sm-12 well margin-well">
+            <span class="book-name h2">
+                {{book.name}}
+            </span>
+        <br/>
+        <br/>
+        <div class="row">
+            <div class="col-md-6">
+                <span class="h4"><span class="book-info">Genre:</span> {{book.genre}}</span>
+                <br/>
+                <br/>
+                <span class="h4"><span class="book-info">Author:</span> {{book.author}}</span>
+
+            </div>
+            <div class="col-md-6">
+                <span class="h3">Description</span>
+                <br/>
+                <span class="h4 book-description">{{book.description}}</span>
+            </div>
         </div>
-        <div class="col-sm-7 well margin-well">
-            <p>
-
-            </p>
-            <div class="pull-right">
-
+        <br/>
+        <div class="row">
+            <div class="col-md-6">
+                <span class="text-muted">
+                    Current owner
+                    <a href="#/users/{{book.user.id}}">
+                        {{book.creator.name}}
+                    </a>
+                </span>
+            </div>
+            <div class="col-md-6">
+                <span class="text-muted">
+                    First owner
+                    <a href="#/users/{{book.user.id}}">
+                        {{book.creator.name}}
+                    </a>
+                </span>
             </div>
         </div>
     </div>
+    <div class="col-sm-12 well margin-well">
+        <span class="h3 book-history">Book history</span>
+        <div ng-repeat="val in [1,2,3]">
+            <div ng-include="'/resources/js/books/_book_history.html'"></div>
+        </div>
+    </div>
+</div>

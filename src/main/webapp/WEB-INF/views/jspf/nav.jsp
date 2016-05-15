@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" ng-controller="navbarCtrl">
     <div class="container-fluid">
         <div class="navbar-header">
-            <div class="navbar-brand"><b>BookCrossing</b></div>
+            <div class="navbar-brand logo"><b>BookCrossing</b></div>
         </div>
 
 
