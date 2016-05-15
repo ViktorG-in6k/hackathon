@@ -16,4 +16,6 @@ public interface TransferService {
     List<TransferDTO> getCurrentBooks(Authentication authentication);
 
     List<TransferDTO> getHistoryBooks(Authentication authentication);
+
+    List<TransferDTO> getHistoryOfBook(int bookId);
 }

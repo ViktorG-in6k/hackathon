@@ -25,7 +25,7 @@ public class TransferController {
     }
 
     @RequestMapping(value = "/api/transfer/{transferId}", method = RequestMethod.DELETE)
-    public void remoteTransfer(@PathVariable("transferId") int transferId) {
+    public void closeTransfer(@PathVariable("transferId") int transferId) {
         transferService.closeTransfer(transferId);
     }
 
