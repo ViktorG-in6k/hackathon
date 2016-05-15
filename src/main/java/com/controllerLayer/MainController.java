@@ -1,5 +1,6 @@
 package com.controllerLayer;
 
+import com.dataLayer.entity.DTO.UserDTO;
 import com.dataLayer.entity.User;
 import org.springframework.security.core.Authentication;
 
@@ -23,8 +24,8 @@ public class MainController {
     @RequestMapping(value = "/getCurrentUser")
     public
     @ResponseBody
-    User getCurrentUserEmail(Authentication authentication) {
-        return ((User) authentication.getPrincipal());
+    UserDTO getCurrentUserEmail(Authentication authentication) {
+        return new UserDTO((User) authentication.getPrincipal());
     }
 
     @RequestMapping(value = "/app")
