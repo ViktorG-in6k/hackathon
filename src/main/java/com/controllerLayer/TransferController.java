@@ -1,14 +1,14 @@
 package com.controllerLayer;
 
-import com.dataLayer.entity.DTO.BookDTO;
-import com.dataLayer.entity.DTO.RequestBook;
 import com.dataLayer.entity.DTO.TransferDTO;
-import com.serviceLayer.service.interfaces.BookService;
 import com.serviceLayer.service.interfaces.TransferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class TransferController {
     @Autowired
     TransferService transferService;
 
-    @RequestMapping(value = "/api/books/{bookId}/transfer/{transferId}", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/books/{bookId}/transfer", method = RequestMethod.POST)
     public
     @ResponseBody
     void newTransfer(@PathVariable("bookId") int bookId,Authentication authentication) {

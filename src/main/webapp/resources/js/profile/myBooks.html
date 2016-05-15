@@ -1,4 +1,14 @@
+<div class="row">
+    <div class="text-right">
+        <a href="/createBook" class="btn btn-success btn-lg"
+           style="margin-right: 15px">Create book</a>
+    </div>
+</div>
+<br/>
 <ul class="list-group" id="contact-list">
+    <li ng-if="!transfers.length">
+        <div class="alert alert-warning"><span class="h3">You have no books for now.</span></div>
+    </li>
     <li class="list-group-item book" ng-repeat="transfer in transfers">
         <div class="col-xs-12 col-sm-3">
             <img ng-src="{{transfer.book.picture}}" alt="{{transfer.book.name}}"

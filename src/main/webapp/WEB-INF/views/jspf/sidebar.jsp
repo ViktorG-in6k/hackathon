@@ -13,4 +13,10 @@
         <span class="glyphicon glyphicon-ok"></span>
         History
     </a>
+    <br/>
+    <a href="#/foundBook" class="list-group-item ">
+        <i class="fa fa-user"></i>
+        <span class="glyphicon glyphicon-search"></span>
+        Found a book?
+    </a>
 </div>

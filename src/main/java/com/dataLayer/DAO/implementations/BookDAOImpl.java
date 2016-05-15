@@ -54,8 +54,10 @@ public class BookDAOImpl implements BookDAO {
     @Override
     public void setOwner(int bookId) {
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.createQuery("update book set owner_id = :null where id = :bookId");
+
+        Query query = session.createQuery("update book set owner_id = :id where id = :bookId");
         query
+                .setString("id",null)
                 .setInteger("bookId",bookId);
         query.executeUpdate();
     }

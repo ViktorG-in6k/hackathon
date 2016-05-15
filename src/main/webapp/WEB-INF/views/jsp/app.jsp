@@ -42,7 +42,8 @@
 <script src="/resources/js/books/transferService.js"></script>
 <script src="/resources/js/profile/profileCtrl.js"></script>
 <script src="/resources/js/profile/userTransfers.js"></script>
-<script src="/resources/js/profile/closeTransfer.js"></script>
+<script src="/resources/js/foundBook/foundBook.js"></script>
+<script src="/resources/js/foundBook/foundBookCtrl.js"></script>
 
 
 </body>
