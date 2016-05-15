@@ -4,7 +4,7 @@
         <span class="glyphicon glyphicon-bell"></span>
         News
     </a>
-    <a href="#" class="list-group-item">
+    <a href="#/myBooks" class="list-group-item">
         <span class="glyphicon glyphicon-heart-empty"></span>
         Mybooks
     </a>

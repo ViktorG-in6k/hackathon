@@ -1,0 +1,25 @@
+<ul class="list-group" id="contact-list">
+    <li class="list-group-item book" ng-repeat="transfer in transfers">
+        <div class="col-xs-12 col-sm-3">
+            <img ng-src="{{transfer.book.picture}}" alt="{{transfer.book.name}}"
+                 class="img-responsive"/>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+                <span class="name h4">
+                    <a href="#/books/{{transfer.book.id}}" class="mybtn">{{transfer.book.name}}</a>
+                </span>
+            <br/>
+            <br/>
+            <span class="h4"><span class="book-info">Genre:</span> {{transfer.book.genre}}</span>
+            <br/>
+            <span class="h4"><span class="book-info">Author:</span> {{transfer.book.author}}</span>
+            <br/>
+            <br/>
+            <span class="h5 book-description">{{transfer.book.description}}</span>
+            <br/>
+        </div>
+
+        <span class="text-muted book-author"></span>
+        <div class="clearfix"></div>
+    </li>
+</ul>

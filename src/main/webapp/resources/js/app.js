@@ -6,7 +6,10 @@ var bookCrossing = angular.module('bookCrossing', [
     'sidebarCtrl',
     'bookService',
     'bookCtrls',
-    'transferService'
+    'transferService',
+    'ui-notification',
+    'profileCtrl',
+    'userTransfers'
 ]);
 
 bookCrossing.config(['$routeProvider',
@@ -23,6 +26,10 @@ bookCrossing.config(['$routeProvider',
             .when('/createBook', {
                 templateUrl: '/resources/js/books/newBook.html',
                 controller: 'bookCreationCtrl'
+            })
+            .when('/myBooks', {
+                templateUrl: '/resources/js/profile/myBooks.html',
+                controller: 'profileCtrl'
             })
             .otherwise({
                 redirectTo: '/books'

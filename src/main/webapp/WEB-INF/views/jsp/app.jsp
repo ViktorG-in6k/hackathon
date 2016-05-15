@@ -7,6 +7,7 @@
     <title>Bookcrossing</title>
     <link href="/resources/css/lib/bootstrap.min.css" rel="stylesheet"/>
     <link href="/resources/css/lib/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="/resources/css/lib/angular-ui-notification.css" rel="stylesheet"/>
     <link href="/resources/css/main.css" rel="stylesheet"/>
     <link href="/resources/css/books.css" rel="stylesheet"/>
     <link href="/resources/css/sidebar.css" rel="stylesheet"/>
@@ -31,6 +32,7 @@
 <script src="/resources/js/lib/angular-route.min.js"></script>
 <script src="/resources/js/lib/angular-resource.js"></script>
 <script src="/resources/js/lib/angular-animate.js"></script>
+<script src="/resources/js/lib/angular-ui-notification.js"></script>
 
 <script src="/resources/js/app.js"></script>
 <script src="/resources/js/navbarCtrl.js"></script>
@@ -38,6 +40,8 @@
 <script src="/resources/js/books/bookService.js"></script>
 <script src="/resources/js/books/bookCtrls.js"></script>
 <script src="/resources/js/books/transferService.js"></script>
+<script src="/resources/js/profile/profileCtrl.js"></script>
+<script src="/resources/js/profile/userTransfers.js"></script>
 
 
 </body>
