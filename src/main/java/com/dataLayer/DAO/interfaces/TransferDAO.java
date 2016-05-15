@@ -16,5 +16,4 @@ public interface TransferDAO {
 
     List<Transfer> getListOfBookTransfer(int bookId);
 
-    List<Transfer> getHistoryBook(int bookId);
 }
