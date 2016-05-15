@@ -21,6 +21,7 @@ public class BookServiceImpl implements BookService {
     @Autowired
     BookDAO bookDAO;
 
+    @Override
     public void saveBook(RequestBook book, Authentication authentication) {
         User creator = ((User) authentication.getPrincipal());
         Book newBook = new Book(book, creator);
@@ -44,5 +45,16 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book getBookById(int id) {
         return bookDAO.getBookById(id);
+    }
+
+    @Override
+    public void setOwner(int bookId, Authentication authentication) {
+        User owner = ((User) authentication.getPrincipal());
+        bookDAO.setOwner(bookId, owner.getId());
+    }
+
+    @Override
+    public void remoteOwner(int bookId) {
+        bookDAO.setOwner(bookId);
     }
 }

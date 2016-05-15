@@ -17,4 +17,8 @@ public interface BookService {
     BookDTO getBookDTOById(int id);
 
     Book getBookById(int id);
+
+    void setOwner(int bookId, Authentication authentication);
+
+    void remoteOwner(int bookId);
 }

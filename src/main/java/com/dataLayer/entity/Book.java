@@ -16,6 +16,8 @@ public class Book extends Entity {
     private String genre;
     @ManyToOne
     private User creator;
+    @ManyToOne
+    private User owner;
     @Column
     private String picture;
     @Column
@@ -90,5 +92,13 @@ public class Book extends Entity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 }

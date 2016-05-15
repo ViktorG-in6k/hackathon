@@ -10,4 +10,8 @@ public interface BookDAO {
     List<Book> getListOfAllBooks();
 
     Book getBookById(int id);
+
+    void setOwner(int bookId, int ownerId);
+
+    void setOwner(int bookId);
 }
